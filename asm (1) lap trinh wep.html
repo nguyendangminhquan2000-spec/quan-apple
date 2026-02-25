@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quan Apple Store</title>
+    <style>
+      /* RESET & CHỦ ĐỀ CHUNG */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      body {
+        background-color: #f5f5f7; /* Màu nền xám nhạt kiểu Apple */
+        color: #1d1d1f;
+        line-height: 1.6;
+      }
+
+      /* NAVIGATION & HEADER */
+      header {
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px); /* Hiệu ứng mờ kính */
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      header h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+      }
+      nav a {
+        color: #f5f5f7;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+      nav a:hover {
+        color: #2997ff; /* Màu xanh đặc trưng Apple */
+      }
+
+      /* BANNER */
+      .banner-img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+        display: block;
+      }
+      .banner-text {
+        background: #000;
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      /* SECTION CHUNG */
+      section {
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: auto;
+        text-align: center;
+      }
+      h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      /* FEATURES (BOXES) */
+      .features {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .box {
+        background: white;
+        padding: 30px;
+        width: 200px;
+        border-radius: 18px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: 0.3s;
+        font-weight: bold;
+      }
+      .box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      }
+
+      /* TABLE */
+      .table-container {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      th, td {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background: #f5f5f7;
+        font-weight: 600;
+      }
+      tr:hover {
+        background: #fafafa;
+      }
+
+      /* FORM */
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: auto;
+        gap: 15px;
+        background: white;
+        padding: 30px;
+        border-radius: 18px;
+      }
+      input, textarea {
+        padding: 12px;
+        border: 1px solid #d2d2d7;
+        border-radius: 8px;
+        outline: none;
+      }
+      button {
+        padding: 12px;
+        background: #0071e3;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      button:hover {
+        background: #0077ed;
+        transform: scale(1.02);
+      }
+
+      /* FOOTER */
+      footer {
+        background: #1d1d1f;
+        color: #86868b;
+        text-align: center;
+        padding: 30px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>QUAN APPLE STORE</h1>
+      <nav>
+        <a href="#about">Giới thiệu</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#services">Dịch vụ</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+    </header>
+
+    <img src="https://cdn-media.sforum.vn/storage/app/media/thanhhuyen/c%C3%B4ng%20ty%20apple/cong-ty-apple-5.jpg" alt="Apple Store" class="banner-img">
+    
+    <div class="banner-text">
+      <h2>MÔ HÌNH BÁN CHẠY NHẤT</h2>
+      <p>iPhone 12 Pro Max – 14 Plus – 14 Pro Max</p>
+      <br>
+      <a href="#products" style="color: #2997ff; text-decoration: none; font-weight: bold;">Khám phá ngay ></a>
+    </div>
+
+    <section class="features">
+      <div class="box">Hàng New Seal</div>
+      <div class="box">Giá Ưu Đãi</div>
+      <div class="box">iPhone Hot</div>
+    </section>
+
+    <section id="about">
+      <h2>Đôi nét về cửa hàng</h2>
+      <p style="max-width: 700px; margin: auto; color: #6e6e73;">
+        Quan Apple Store - Chuyên các dòng iPhone chất lượng, giá tốt nhất thị trường. 
+        Chúng tôi cam kết máy nguyên bản, hỗ trợ tận tình cho cộng đồng yêu công nghệ.
+      </p>
+      <ul style="list-style: none; margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+        <li>✅ 100% Full Zin</li>
+        <li>✅ Báo đúng tình trạng</li>
+        <li>✅ Hỗ trợ trả góp 0%</li>
+      </ul>
+    </section>
+
+    <section id="products">
+      <h2>Bảng giá tham khảo</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Dòng máy</th>
+              <th>Màu sắc</th>
+              <th>Giá từ (VNĐ)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>iPhone XS Max</td><td>Trắng, Đen, Vàng</td><td>4.900.000</td></tr>
+            <tr><td>iPhone 11</td><td>Đa dạng màu</td><td>5.000.000</td></tr>
+            <tr><td>iPhone 13 Pro Max</td><td>Xanh, Vàng, Trắng</td><td>10.800.000</td></tr>
+            <tr><td>iPhone 15 Pro Max</td><td>Titan Tự Nhiên</td><td>20.000.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Liên hệ tư vấn</h2>
+      <form>
+        <input type="text" placeholder="Họ và tên" required />
+        <input type="tel" placeholder="Số điện thoại" required />
+        <textarea placeholder="Dòng máy bạn quan tâm" rows="4"></textarea>
+        <button type="submit">Gửi yêu cầu</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2026 Quan Apple Store - Uy tín tạo niềm tin</p>
+    </footer>
+
+  </body>
+</html>
